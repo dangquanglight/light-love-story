@@ -45,32 +45,33 @@
 </div>
 
 <!--Carousel-->
-@include('layouts.top_carousel');
+<div id="myCarousel" class="carousel slide carousel-fade">@include('layouts.top_carousel');</div>
 
 <div id="about"></div>
+
 <!--Navbar-->
-@include('layouts.nav_bar');
+<div class="topbar-nav">@include('layouts.nav_bar');</div>
 
 <!--Adam & EVE Section-->
-@include('layouts.about_us');
+<section id="aboutthem" class="white">@include('layouts.about_us');</section>
 
 <!--Family Section-->
-@include('layouts.family');
+<section id="family" class="white">@include('layouts.family');</section>
 
 <!--Big Moments-->
-@include('layouts.moments');
+<section id="moments">@include('layouts.moments');</section>
 
 <!--Favourites List-->
-@include('layouts.favourites_list');
+<section id="favourites" class="white">@include('layouts.favourites_list');</section>
 
 <!--Blog Section-->
-@include('layouts.blog');
+<section id="blog" class="white">@include('layouts.blog');</section>
 
 <!--Contact Section-->
-@include('layouts.contact_us');
+<section id="contactus" class="white contact">@include('layouts.contact_us');</section>
 
 <!--Footer Section-->
-@include('layouts.footer');
+<section class="footer">@include('layouts.footer');</section>
 
 <!-- Al JS Plugins -->
 <script src="js/modernizr.custom.js"></script>
