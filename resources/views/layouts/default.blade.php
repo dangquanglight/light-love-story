@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
     <!-- Bootstrap 3.2 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    {!! Html::style('css/bootstrap.min.css') !!}
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
     <!-- Font Awesome 4.2.0 -->
-    <link href="css/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    {!! Html::style('css/font-awesome-4.2.0/css/font-awesome.min.css') !!}
     <!-- ilove Font 1.0 -->
-    <link href="css/ilove/font-ilove.css" rel="stylesheet">
+    {!! Html::style('css/ilove/font-ilove.css') !!}
     <!-- Animate -->
-    <link rel="stylesheet" href="css/animate.css">
+    {!! Html::style('css/animate.css') !!}
     <!-- Magnific popup -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    {!! Html::style('css/magnific-popup.css') !!}
     <!-- Owl stylesheet -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
+    {!! Html::style('css/owl.carousel.css') !!}
+    {!! Html::style('css/owl.theme.css') !!}
     <!-- Custom Style -->
-    <link rel="stylesheet" href="css/style-blue.css">
+    {!! Html::style('css/style-blue.css') !!}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,60 +45,60 @@
 </div>
 
 <!--Carousel-->
-<div id="myCarousel" class="carousel slide carousel-fade">@include('layouts.top_carousel');</div>
+<div id="myCarousel" class="carousel slide carousel-fade">@include('layouts.top_carousel')</div>
 
 <div id="about"></div>
 
 <!--Navbar-->
-<div class="topbar-nav">@include('layouts.nav_bar');</div>
+<div class="topbar-nav">@include('layouts.nav_bar')</div>
 
 <!--Adam & EVE Section-->
-<section id="aboutthem" class="white">@include('layouts.about_us');</section>
+<section id="aboutthem" class="white">@include('layouts.about_us')</section>
 
 <!--Family Section-->
-<section id="family" class="white">@include('layouts.family');</section>
+<section id="family" class="white">@include('layouts.family')</section>
 
 <!--Big Moments-->
-<section id="moments">@include('layouts.moments');</section>
+<section id="moments">@include('layouts.moments')</section>
 
 <!--Favourites List-->
-<section id="favourites" class="white">@include('layouts.favourites_list');</section>
+<section id="favourites" class="white">@include('layouts.favourites_list')</section>
 
 <!--Blog Section-->
-<section id="blog" class="white">@include('layouts.blog');</section>
+<section id="blog" class="white">@include('layouts.blog')</section>
 
 <!--Contact Section-->
-<section id="contactus" class="white contact">@include('layouts.contact_us');</section>
+<section id="contactus" class="white contact">@include('layouts.contact_us')</section>
 
 <!--Footer Section-->
-<section class="footer">@include('layouts.footer');</section>
+<section class="footer">@include('layouts.footer')</section>
 
 <!-- Al JS Plugins -->
-<script src="js/modernizr.custom.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/jquery.parallax.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/annyang.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/smoothscrolling.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/fss.js"></script>
-<script src="js/geo.js"></script>
-<script src="js/jquery.countTo.js"></script>
-<script src="js/jquery.mixitup.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/slide-fade-content.js"></script>
-<script src="js/twitter/jquery.tweet.js"></script>
-<script src="js/prefixfree.js"></script>
-<script src="js/countup.js"></script>
-<script src="js/modernizr.hover.js"></script>
+{!! Html::script('js/modernizr.custom.js') !!}
+{!! Html::script('js/jquery.min.js') !!}
+{!! Html::script('js/jquery-ui.min.js') !!}
+{!! Html::script('js/bootstrap.min.js') !!}
+{!! Html::script('js/jquery.easing.min.js') !!}
+{!! Html::script('js/jquery.sticky.js') !!}
+{!! Html::script('js/jquery.parallax.js') !!}
+{!! Html::script('js/masonry.pkgd.min.js') !!}
+{!! Html::script('js/annyang.min.js') !!}
+{!! Html::script('js/wow.min.js') !!}
+{!! Html::script('js/waypoints.min.js') !!}
+{!! Html::script('js/smoothscrolling.js') !!}
+{!! Html::script('js/custom.js') !!}
+{!! Html::script('js/fss.js') !!}
+{!! Html::script('js/geo.js') !!}
+{!! Html::script('js/jquery.countTo.js') !!}
+{!! Html::script('js/jquery.mixitup.min.js') !!}
+{!! Html::script('js/imagesloaded.pkgd.min.js') !!}
+{!! Html::script('js/owl.carousel.min.js') !!}
+{!! Html::script('js/jquery.magnific-popup.min.js') !!}
+{!! Html::script('js/slide-fade-content.js') !!}
+{!! Html::script('js/twitter/jquery.tweet.js') !!}
+{!! Html::script('js/prefixfree.js') !!}
+{!! Html::script('js/countup.js') !!}
+{!! Html::script('js/modernizr.hover.js') !!}
 </body>
 </html>
 
