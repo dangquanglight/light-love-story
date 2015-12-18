@@ -31,6 +31,13 @@
         protected $loginPath = 'systems/login';
 
         /**
+         * Define redirect url after logout
+         *
+         * @var string
+         */
+        protected $redirectAfterLogout = 'systems/login';
+
+        /**
          * Create a new authentication controller instance.
          *
          * @return void
