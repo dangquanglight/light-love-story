@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends BaseController
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Display a listing of the resource.

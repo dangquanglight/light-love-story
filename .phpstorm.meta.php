@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2015-12-17.
+    * Generated on 2015-12-18.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -20,8 +20,8 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Console\Kernel' instanceof \App\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \App\Exceptions\Handler,
             'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
-            'auth' instanceof \Illuminate\Auth\AuthManager,
-            'auth.driver' instanceof \Illuminate\Auth\Guard,
+            'auth' instanceof \Sarav\Multiauth\AuthManager,
+            'auth.driver' instanceof \Sarav\Multiauth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
             'illuminate.route.dispatcher' instanceof \Illuminate\Routing\ControllerDispatcher,
             'cookie' instanceof \Illuminate\Cookie\CookieJar,
@@ -134,8 +134,8 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Console\Kernel' instanceof \App\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \App\Exceptions\Handler,
             'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
-            'auth' instanceof \Illuminate\Auth\AuthManager,
-            'auth.driver' instanceof \Illuminate\Auth\Guard,
+            'auth' instanceof \Sarav\Multiauth\AuthManager,
+            'auth.driver' instanceof \Sarav\Multiauth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
             'illuminate.route.dispatcher' instanceof \Illuminate\Routing\ControllerDispatcher,
             'cookie' instanceof \Illuminate\Cookie\CookieJar,
@@ -248,8 +248,8 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Console\Kernel' instanceof \App\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \App\Exceptions\Handler,
             'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
-            'auth' instanceof \Illuminate\Auth\AuthManager,
-            'auth.driver' instanceof \Illuminate\Auth\Guard,
+            'auth' instanceof \Sarav\Multiauth\AuthManager,
+            'auth.driver' instanceof \Sarav\Multiauth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
             'illuminate.route.dispatcher' instanceof \Illuminate\Routing\ControllerDispatcher,
             'cookie' instanceof \Illuminate\Cookie\CookieJar,
@@ -362,8 +362,8 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Console\Kernel' instanceof \App\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \App\Exceptions\Handler,
             'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
-            'auth' instanceof \Illuminate\Auth\AuthManager,
-            'auth.driver' instanceof \Illuminate\Auth\Guard,
+            'auth' instanceof \Sarav\Multiauth\AuthManager,
+            'auth.driver' instanceof \Sarav\Multiauth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
             'illuminate.route.dispatcher' instanceof \Illuminate\Routing\ControllerDispatcher,
             'cookie' instanceof \Illuminate\Cookie\CookieJar,
