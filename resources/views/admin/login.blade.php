@@ -98,7 +98,7 @@
 
     <!-- Footer -->
     <footer class="text-muted text-center">
-        <small><span id="year-copy"></span> &copy; Powered by LightCorp</small>
+        <small><span id="year-copy"></span> &copy; Powered by Light Corp</small>
     </footer>
     <!-- END Footer -->
 </div>
