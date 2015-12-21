@@ -20,7 +20,7 @@ class MediaController extends AdminBaseController
 
     public function postImages(Request $request)
     {
-        var_dump(Input::all()); die();
+        dd($request->all());
     }
 
 }

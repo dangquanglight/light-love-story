@@ -21,6 +21,16 @@
 
     <!-- Modernizr (browser feature detection library) & Respond.js (Enable responsive CSS code on browsers that don't support it, eg IE8) -->
     {!! Html::script('admin/js/vendor/modernizr-2.7.1-respond-1.4.2.min.js') !!}
+
+    <!-- Remember to include excanvas for IE8 chart support -->
+    <!--[if IE 8]><script src="js/helpers/excanvas.min.js"></script><![endif]-->
+
+    {!! Html::script('admin/js/vendor/jquery-1.11.1.min.js') !!}
+
+            <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
+    {!! Html::script('admin/js/vendor/bootstrap.min.js') !!}
+    {!! Html::script('admin/js/plugins.js') !!}
+    {!! Html::script('admin/js/app.js') !!}
 </head>
 
 <body class="page-loading">
@@ -91,16 +101,6 @@
 
 <!-- Scroll to top link, initialized in js/app.js - scrollToTop() -->
 <a href="#" id="to-top"><i class="fa fa-angle-double-up"></i></a>
-
-<!-- Remember to include excanvas for IE8 chart support -->
-<!--[if IE 8]><script src="js/helpers/excanvas.min.js"></script><![endif]-->
-
-{!! Html::script('admin/js/vendor/jquery-1.11.1.min.js') !!}
-
-<!-- Bootstrap.js, Jquery plugins and Custom JS code -->
-{!! Html::script('admin/js/vendor/bootstrap.min.js') !!}
-{!! Html::script('admin/js/plugins.js') !!}
-{!! Html::script('admin/js/app.js') !!}
 
 </body>
 </html>

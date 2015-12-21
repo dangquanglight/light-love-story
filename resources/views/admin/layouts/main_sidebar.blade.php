@@ -28,7 +28,7 @@
         <!-- Sidebar Navigation -->
         <ul class="sidebar-nav">
             <li>
-                <a href="" class="active">
+                <a href="" class="">
                     <i class="gi gi-home sidebar-nav-icon"></i>
                     Dashboard
                 </a>
@@ -47,8 +47,17 @@
             </li>
             <li>
                 <a href="{{route('systems_media_images_list')}}">
+                    <i class="gi gi-albums sidebar-nav-icon"></i>
+                    Albums
+                </a>
+                <a href="{{route('systems_media_images_list')}}"
+                class="{{Route::current()->getName() == 'systems_media_images_list' ? 'active' : ''}}">
                     <i class="gi gi-picture sidebar-nav-icon"></i>
                     Images
+                </a>
+                <a href="{{route('systems_media_images_list')}}">
+                    <i class="gi gi-facetime_video sidebar-nav-icon"></i>
+                    Videos
                 </a>
             </li>
         </ul>
