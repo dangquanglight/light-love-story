@@ -28,7 +28,7 @@
         |
         */
 
-        'model' => App\User::class,
+        'model' => App\Models\User::class,
 
         /*
         |--------------------------------------------------------------------------
@@ -67,12 +67,12 @@
         'multi' => [
             'user'  => [
                 'driver' => 'eloquent',
-                'model'  => App\User::class,
+                'model'  => App\Models\User::class,
                 'table'  => 'users'
             ],
             'admin' => [
                 'driver' => 'eloquent',
-                'model'  => App\Admin::class,
+                'model'  => App\Models\Admin::class,
                 'table'  => 'admins'
             ]
         ],

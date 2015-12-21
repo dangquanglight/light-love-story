@@ -14,6 +14,7 @@ class AdminsTableSeeder extends Seeder
         DB::table('admins')->insert([
             'username' => 'admin',
             'password' => bcrypt('13141992'),
+            'created_at' => date('y-m-d h:i:s', time())
         ]);
     }
 }

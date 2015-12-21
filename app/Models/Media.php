@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,7 +9,7 @@ class Media extends Model
 
     public function mediaAlbum()
     {
-        return $this->belongsTo('App/MediaAlbum');
+        return $this->belongsTo('App/Models/MediaAlbum');
     }
 
 }

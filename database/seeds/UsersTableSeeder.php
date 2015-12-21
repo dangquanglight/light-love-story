@@ -13,7 +13,8 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'username' => 'admin',
-            'password' => bcrypt('12345')
+            'password' => bcrypt('12345'),
+            'created_at' => date('y-m-d h:i:s', time())
         ]);
     }
 }

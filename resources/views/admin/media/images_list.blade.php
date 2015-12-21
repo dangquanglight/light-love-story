@@ -14,7 +14,9 @@
 
     <!-- Dropzone Content -->
     <!-- Dropzone.js, You can check out https://github.com/enyo/dropzone/wiki for usage examples -->
-    <form action="page_forms_components.html" class="dropzone"></form>
+    <form action="{{route('systems_post_media_images_list')}}" method="post" class="dropzone" enctype="multipart/form-data">
+        {{csrf_field()}}
+    </form>
     <!-- END Dropzone Content -->
 </div>
 <!-- END Dropzone Block -->

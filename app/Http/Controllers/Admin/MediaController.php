@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
+use Input;
 use App\Http\Requests;
 
 class MediaController extends AdminBaseController
@@ -20,7 +20,7 @@ class MediaController extends AdminBaseController
 
     public function postImages(Request $request)
     {
-
+        var_dump(Input::all()); die();
     }
 
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.1.24 (LTS) on 2015-12-18.
+ * Generated for Laravel 5.1.24 (LTS) on 2015-12-21.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -1172,13 +1172,23 @@ namespace {
     class Auth extends \Illuminate\Support\Facades\Auth{
         
         /**
+         * Get the default authentication driver name.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getDefaultDriver(){
+            return \Sarav\Multiauth\AuthManager::getDefaultDriver();
+        }
+        
+        /**
          * Create an instance of the database driver.
          *
          * @return \Illuminate\Auth\Guard 
          * @static 
          */
         public static function createDatabaseDriver(){
-            return \Illuminate\Auth\AuthManager::createDatabaseDriver();
+            return \Sarav\Multiauth\AuthManager::createDatabaseDriver();
         }
         
         /**
@@ -1188,17 +1198,7 @@ namespace {
          * @static 
          */
         public static function createEloquentDriver(){
-            return \Illuminate\Auth\AuthManager::createEloquentDriver();
-        }
-        
-        /**
-         * Get the default authentication driver name.
-         *
-         * @return string 
-         * @static 
-         */
-        public static function getDefaultDriver(){
-            return \Illuminate\Auth\AuthManager::getDefaultDriver();
+            return \Sarav\Multiauth\AuthManager::createEloquentDriver();
         }
         
         /**
@@ -1209,7 +1209,7 @@ namespace {
          * @static 
          */
         public static function setDefaultDriver($name){
-            \Illuminate\Auth\AuthManager::setDefaultDriver($name);
+            \Sarav\Multiauth\AuthManager::setDefaultDriver($name);
         }
         
         /**
@@ -1220,8 +1220,8 @@ namespace {
          * @static 
          */
         public static function driver($driver = null){
-            //Method inherited from \Illuminate\Support\Manager            
-            return \Illuminate\Auth\AuthManager::driver($driver);
+            //Method inherited from \Sarav\Multiauth\Manager            
+            return \Sarav\Multiauth\AuthManager::driver($driver);
         }
         
         /**
@@ -1233,8 +1233,8 @@ namespace {
          * @static 
          */
         public static function extend($driver, $callback){
-            //Method inherited from \Illuminate\Support\Manager            
-            return \Illuminate\Auth\AuthManager::extend($driver, $callback);
+            //Method inherited from \Sarav\Multiauth\Manager            
+            return \Sarav\Multiauth\AuthManager::extend($driver, $callback);
         }
         
         /**
@@ -1244,8 +1244,60 @@ namespace {
          * @static 
          */
         public static function getDrivers(){
-            //Method inherited from \Illuminate\Support\Manager            
-            return \Illuminate\Auth\AuthManager::getDrivers();
+            //Method inherited from \Sarav\Multiauth\Manager            
+            return \Sarav\Multiauth\AuthManager::getDrivers();
+        }
+        
+        /**
+         * Returns the auth configuration array
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getConfiguration(){
+            //Method inherited from \Sarav\Multiauth\Manager            
+            return \Sarav\Multiauth\AuthManager::getConfiguration();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function resetConfig(){
+            //Method inherited from \Sarav\Multiauth\Manager            
+            return \Sarav\Multiauth\AuthManager::resetConfig();
+        }
+        
+        /**
+         * This initiallzes the default config setting
+         *
+         * @param array $config
+         * @static 
+         */
+        public static function setDefaultConfig($config = array()){
+            //Method inherited from \Sarav\Multiauth\Manager            
+            return \Sarav\Multiauth\AuthManager::setDefaultConfig($config);
+        }
+        
+        /**
+         * Get a unique identifier for the auth session value.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getName(){
+            return \Sarav\Multiauth\Guard::getName();
+        }
+        
+        /**
+         * Get the name of the cookie used to store the "recaller".
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getRecallerName(){
+            return \Sarav\Multiauth\Guard::getRecallerName();
         }
         
         /**
@@ -1255,7 +1307,8 @@ namespace {
          * @static 
          */
         public static function check(){
-            return \Illuminate\Auth\Guard::check();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::check();
         }
         
         /**
@@ -1265,17 +1318,19 @@ namespace {
          * @static 
          */
         public static function guest(){
-            return \Illuminate\Auth\Guard::guest();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::guest();
         }
         
         /**
          * Get the currently authenticated user.
          *
-         * @return \App\User|null 
+         * @return \App\Models\User|null 
          * @static 
          */
         public static function user(){
-            return \Illuminate\Auth\Guard::user();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::user();
         }
         
         /**
@@ -1285,7 +1340,8 @@ namespace {
          * @static 
          */
         public static function id(){
-            return \Illuminate\Auth\Guard::id();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::id();
         }
         
         /**
@@ -1296,7 +1352,8 @@ namespace {
          * @static 
          */
         public static function once($credentials = array()){
-            return \Illuminate\Auth\Guard::once($credentials);
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::once($credentials);
         }
         
         /**
@@ -1307,7 +1364,8 @@ namespace {
          * @static 
          */
         public static function validate($credentials = array()){
-            return \Illuminate\Auth\Guard::validate($credentials);
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::validate($credentials);
         }
         
         /**
@@ -1318,7 +1376,8 @@ namespace {
          * @static 
          */
         public static function basic($field = 'email'){
-            return \Illuminate\Auth\Guard::basic($field);
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::basic($field);
         }
         
         /**
@@ -1329,7 +1388,8 @@ namespace {
          * @static 
          */
         public static function onceBasic($field = 'email'){
-            return \Illuminate\Auth\Guard::onceBasic($field);
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::onceBasic($field);
         }
         
         /**
@@ -1342,7 +1402,8 @@ namespace {
          * @static 
          */
         public static function attempt($credentials = array(), $remember = false, $login = true){
-            return \Illuminate\Auth\Guard::attempt($credentials, $remember, $login);
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::attempt($credentials, $remember, $login);
         }
         
         /**
@@ -1353,7 +1414,8 @@ namespace {
          * @static 
          */
         public static function attempting($callback){
-            \Illuminate\Auth\Guard::attempting($callback);
+            //Method inherited from \Illuminate\Auth\Guard            
+            \Sarav\Multiauth\Guard::attempting($callback);
         }
         
         /**
@@ -1365,7 +1427,8 @@ namespace {
          * @static 
          */
         public static function login($user, $remember = false){
-            \Illuminate\Auth\Guard::login($user, $remember);
+            //Method inherited from \Illuminate\Auth\Guard            
+            \Sarav\Multiauth\Guard::login($user, $remember);
         }
         
         /**
@@ -1373,11 +1436,12 @@ namespace {
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \App\User 
+         * @return \App\Models\User 
          * @static 
          */
         public static function loginUsingId($id, $remember = false){
-            return \Illuminate\Auth\Guard::loginUsingId($id, $remember);
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::loginUsingId($id, $remember);
         }
         
         /**
@@ -1388,7 +1452,8 @@ namespace {
          * @static 
          */
         public static function onceUsingId($id){
-            return \Illuminate\Auth\Guard::onceUsingId($id);
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::onceUsingId($id);
         }
         
         /**
@@ -1398,7 +1463,8 @@ namespace {
          * @static 
          */
         public static function logout(){
-            \Illuminate\Auth\Guard::logout();
+            //Method inherited from \Illuminate\Auth\Guard            
+            \Sarav\Multiauth\Guard::logout();
         }
         
         /**
@@ -1409,7 +1475,8 @@ namespace {
          * @static 
          */
         public static function getCookieJar(){
-            return \Illuminate\Auth\Guard::getCookieJar();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::getCookieJar();
         }
         
         /**
@@ -1420,7 +1487,8 @@ namespace {
          * @static 
          */
         public static function setCookieJar($cookie){
-            \Illuminate\Auth\Guard::setCookieJar($cookie);
+            //Method inherited from \Illuminate\Auth\Guard            
+            \Sarav\Multiauth\Guard::setCookieJar($cookie);
         }
         
         /**
@@ -1430,7 +1498,8 @@ namespace {
          * @static 
          */
         public static function getDispatcher(){
-            return \Illuminate\Auth\Guard::getDispatcher();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::getDispatcher();
         }
         
         /**
@@ -1441,7 +1510,8 @@ namespace {
          * @static 
          */
         public static function setDispatcher($events){
-            \Illuminate\Auth\Guard::setDispatcher($events);
+            //Method inherited from \Illuminate\Auth\Guard            
+            \Sarav\Multiauth\Guard::setDispatcher($events);
         }
         
         /**
@@ -1451,7 +1521,8 @@ namespace {
          * @static 
          */
         public static function getSession(){
-            return \Illuminate\Auth\Guard::getSession();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::getSession();
         }
         
         /**
@@ -1461,7 +1532,8 @@ namespace {
          * @static 
          */
         public static function getProvider(){
-            return \Illuminate\Auth\Guard::getProvider();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::getProvider();
         }
         
         /**
@@ -1472,17 +1544,19 @@ namespace {
          * @static 
          */
         public static function setProvider($provider){
-            \Illuminate\Auth\Guard::setProvider($provider);
+            //Method inherited from \Illuminate\Auth\Guard            
+            \Sarav\Multiauth\Guard::setProvider($provider);
         }
         
         /**
          * Return the currently cached user.
          *
-         * @return \App\User|null 
+         * @return \App\Models\User|null 
          * @static 
          */
         public static function getUser(){
-            return \Illuminate\Auth\Guard::getUser();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::getUser();
         }
         
         /**
@@ -1493,7 +1567,8 @@ namespace {
          * @static 
          */
         public static function setUser($user){
-            \Illuminate\Auth\Guard::setUser($user);
+            //Method inherited from \Illuminate\Auth\Guard            
+            \Sarav\Multiauth\Guard::setUser($user);
         }
         
         /**
@@ -1503,7 +1578,8 @@ namespace {
          * @static 
          */
         public static function getRequest(){
-            return \Illuminate\Auth\Guard::getRequest();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::getRequest();
         }
         
         /**
@@ -1514,37 +1590,19 @@ namespace {
          * @static 
          */
         public static function setRequest($request){
-            return \Illuminate\Auth\Guard::setRequest($request);
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::setRequest($request);
         }
         
         /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \App\User 
+         * @return \App\Models\User 
          * @static 
          */
         public static function getLastAttempted(){
-            return \Illuminate\Auth\Guard::getLastAttempted();
-        }
-        
-        /**
-         * Get a unique identifier for the auth session value.
-         *
-         * @return string 
-         * @static 
-         */
-        public static function getName(){
-            return \Illuminate\Auth\Guard::getName();
-        }
-        
-        /**
-         * Get the name of the cookie used to store the "recaller".
-         *
-         * @return string 
-         * @static 
-         */
-        public static function getRecallerName(){
-            return \Illuminate\Auth\Guard::getRecallerName();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::getLastAttempted();
         }
         
         /**
@@ -1554,7 +1612,8 @@ namespace {
          * @static 
          */
         public static function viaRemember(){
-            return \Illuminate\Auth\Guard::viaRemember();
+            //Method inherited from \Illuminate\Auth\Guard            
+            return \Sarav\Multiauth\Guard::viaRemember();
         }
         
     }

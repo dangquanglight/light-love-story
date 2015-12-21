@@ -33,5 +33,6 @@
 
     // Media
     Route::get('systems/media/images', 'Admin\MediaController@getImages')->name('systems_media_images_list');
+    Route::post('systems/media/images', 'Admin\MediaController@postImages')->name('systems_post_media_images_list');
 
     // endregion ADMIN
