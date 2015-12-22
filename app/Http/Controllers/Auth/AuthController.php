@@ -42,7 +42,7 @@
          *
          * @var string
          */
-        protected $loginPath = 'auth/login';
+        protected $loginPath = 'user/login';
 
         /**
          * Create a new authentication controller instance.

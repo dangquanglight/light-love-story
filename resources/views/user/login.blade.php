@@ -26,7 +26,7 @@
 
     <div class="main">
         <div class="login">
-            {!! Form::open(array('url' => 'auth/login','class'=>'form')) !!}
+            {!! Form::open(array('url' => route('login'),'class'=>'form')) !!}
 
             {!! Form::password('password', array('placeholder' => 'Password', 'required')) !!}
 

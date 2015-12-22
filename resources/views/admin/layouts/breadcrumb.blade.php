@@ -1,4 +1,15 @@
 <ul class="breadcrumb breadcrumb-top">
-    <li><a href="">Home</a></li>
-    <li>Forms</li>
+    @if(isset($breadcrumb))
+        @foreach($breadcrumb as $item)
+            <li>
+                @if(isset($item['url']) && !empty($item['url']))
+                    <a href="{{$item['url']}}">
+                        {{$item['name']}}
+                    </a>
+                @else
+                    {{$item['name']}}
+                @endif
+            </li>
+        @endforeach
+    @endif
 </ul>

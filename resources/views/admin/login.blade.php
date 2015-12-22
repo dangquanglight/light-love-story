@@ -52,7 +52,7 @@
         @endforeach
 
         <!-- Login Form -->
-        {!! Form::open(array('url' => 'systems/login','id'=>'form-login', 'class' => 'form-horizontal form-bordered form-control-borderless')) !!}
+        {!! Form::open(array('url' => route('systems_login'),'id'=>'form-login', 'class' => 'form-horizontal form-bordered form-control-borderless')) !!}
 
             <div class="form-group">
                 <div class="col-xs-12">
