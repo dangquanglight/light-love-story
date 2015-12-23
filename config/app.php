@@ -204,4 +204,6 @@ return [
         'Image' => Intervention\Image\Facades\Image::class
     ],
 
+    'env' => env('APP_ENV', 'production'),
+
 ];
